@@ -5,6 +5,7 @@ default['kibana']['checksum'] = '4cc36e5c6ca7c495667319df75feda1facb7c43a3d96868
 default['kibana']['user'] = 'kibana'
 default['kibana']['group'] = 'kibana'
 default['kibana']['dir'] = '/opt'
+default['kibana']['conf_file'] = ::File.join(node['kibana']['dir'], 'kibana', 'config', 'kibana.yml')
 
 default['kibana']['path']['logs'] = '/var/log/kibana'
 
