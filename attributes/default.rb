@@ -7,3 +7,5 @@ default['kibana']['group'] = 'kibana'
 default['kibana']['dir'] = '/opt'
 
 default['kibana']['path']['logs'] = '/var/log/kibana'
+
+default['kibana']['setup_user'] = true

@@ -6,12 +6,14 @@ user 'kibana user' do
   supports manage_home: false
   action :create
   system true
+  only_if { node['kibana']['setup_user'] }
 end
 
 group 'kibana group' do
   group_name node['kibana']['user']
   action :create
   system true
+  only_if { node['kibana']['setup_user'] }
 end
 
 ark 'kibana' do
