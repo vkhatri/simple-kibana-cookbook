@@ -9,4 +9,8 @@ default['kibana']['conf_file'] = ::File.join(node['kibana']['dir'], 'kibana', 'c
 
 default['kibana']['path']['logs'] = '/var/log/kibana'
 
+default['kibana']['service_type'] = 'runit' # options: runit sysv
+default['kibana']['notify_restart'] = true
 default['kibana']['setup_user'] = true
+
+default['kibana']['config'] = {}
